@@ -3,17 +3,32 @@ export default function ProductCard({ producto }) {
     <article className={producto.popular ? "product popular" : "product"}>
       {producto.popular && <span className="badge">Más pedido</span>}
 
-      <div className="productEmoji">🍕</div>
+      <div className="productTape"></div>
 
-      <span className="category">{producto.categoria}</span>
+      <div className="productHeader">
+        <span>{producto.categoria}</span>
+      </div>
 
       <h3>{producto.nombre}</h3>
 
       <p>{producto.descripcion}</p>
 
-      <div className="productFooter">
-        <strong>{producto.precio.toFixed(2)} €</strong>
-        <button>+</button>
+      <div className="productBottom">
+        <div className="priceTag">
+          <small>Precio</small>
+
+          <strong>{producto.precio.toFixed(2)} €</strong>
+        </div>
+
+        <div className="productActions">
+          <button className="photoBtn">
+            📸
+          </button>
+
+          <button className="allergenBtn">
+            ⚠️
+          </button>
+        </div>
       </div>
     </article>
   );
