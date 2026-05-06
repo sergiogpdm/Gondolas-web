@@ -1,26 +1,30 @@
-export default function PizzeriaSelector({
-  pizzerias,
-  actual,
-  onSelect,
-}) {
+export default function PizzeriaSelector({ pizzerias, actual, onSelect }) {
   return (
-    <section className="selector" id="locales">
-      <h2>Selecciona tu local</h2>
+    <section className="locals" id="locales">
+      <div className="sectionHeader">
+        <span>Elige tu local</span>
+        <h2>Cada Góndola, su carta.</h2>
+        <p>Selecciona la pizzería y la web cambia automáticamente.</p>
+      </div>
 
-      <div className="selectorGrid">
+      <div className="localsGrid">
         {pizzerias.map((pizzeria) => (
           <button
             key={pizzeria.id}
             onClick={() => onSelect(pizzeria)}
             className={
               actual.id === pizzeria.id
-                ? "local active"
-                : "local"
+                ? "localCard active"
+                : "localCard"
             }
           >
-            <span>{pizzeria.nombre}</span>
+            <div>
+              <span className="status">{pizzeria.estado}</span>
+              <h3>{pizzeria.nombre}</h3>
+              <p>{pizzeria.direccion}</p>
+            </div>
 
-            <small>{pizzeria.direccion}</small>
+            <strong>{pizzeria.destacado}</strong>
           </button>
         ))}
       </div>

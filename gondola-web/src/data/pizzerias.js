@@ -1,75 +1,86 @@
 export const pizzerias = [
   {
     id: "mocejon",
-
     nombre: "Góndola Mocejón",
-
     direccion: "Plaza Don Tomás Díaz Prieto",
-
     telefono: "633 152 056",
-
     whatsapp: "34633152056",
-
-    horario: "Abierto hoy",
-
+    estado: "Abierto hoy",
+    destacado: "Especialidad en pizzas artesanas",
     productos: [
       {
         nombre: "Pizza Barbacoa",
-        descripcion:
-          "Mozzarella, bacon, pollo y salsa BBQ.",
-
+        descripcion: "Mozzarella, bacon, pollo, carne y salsa BBQ.",
         precio: 10.5,
-
         categoria: "Pizzas",
+        popular: true,
       },
-
       {
         nombre: "Pizza Carbonara",
-
-        descripcion:
-          "Bacon, champiñón y salsa carbonara.",
-
+        descripcion: "Base carbonara, bacon, champiñón y mozzarella.",
         precio: 10,
-
         categoria: "Pizzas",
+        popular: true,
       },
-
+      {
+        nombre: "Pizza 4 Quesos",
+        descripcion: "Mezcla cremosa de quesos fundidos.",
+        precio: 11,
+        categoria: "Pizzas",
+        popular: false,
+      },
       {
         nombre: "Hamburguesa Góndola",
-
-        descripcion:
-          "Pan brioche y salsa especial.",
-
+        descripcion: "Pan brioche, carne jugosa, queso y salsa especial.",
         precio: 8.9,
-
         categoria: "Hamburguesas",
+        popular: true,
+      },
+      {
+        nombre: "Panini Mixto",
+        descripcion: "Crujiente, caliente, con jamón y queso fundido.",
+        precio: 5.5,
+        categoria: "Entrantes",
+        popular: false,
+      },
+      {
+        nombre: "Patatas Bacon Cheese",
+        descripcion: "Patatas doradas con bacon, queso y salsa.",
+        precio: 6.9,
+        categoria: "Entrantes",
+        popular: true,
       },
     ],
   },
-
   {
     id: "toledo",
-
     nombre: "Góndola Toledo",
-
     direccion: "Toledo",
-
     telefono: "825 936 161",
-
     whatsapp: "34825936161",
-
-    horario: "Abierto hoy",
-
+    estado: "Pide para recoger",
+    destacado: "Pizzas recién horneadas",
     productos: [
       {
-        nombre: "Pizza 4 Quesos",
-
-        descripcion:
-          "Mezcla cremosa de quesos italianos.",
-
-        precio: 11,
-
+        nombre: "Pizza Prosciutto",
+        descripcion: "Tomate, mozzarella, jamón cocido y orégano.",
+        precio: 9.9,
         categoria: "Pizzas",
+        popular: true,
+      },
+      {
+        nombre: "Pizza Diavola",
+        descripcion: "Pepperoni, mozzarella, tomate y toque picante.",
+        precio: 11.2,
+        categoria: "Pizzas",
+        popular: true,
+      },
+      {
+        nombre: "Burger BBQ",
+        descripcion: "Carne, queso, bacon crujiente y salsa barbacoa.",
+        precio: 8.5,
+        categoria: "Hamburguesas",
+        popular: false,
       },
     ],
   },

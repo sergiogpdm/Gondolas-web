@@ -1,21 +1,18 @@
 export default function Header() {
   return (
     <header className="header">
-      <div className="logo">
-        <span className="barber"></span>
+      <a href="#" className="brand">
+        <span className="brandIcon"></span>
 
         <div>
           <strong>GÓNDOLA</strong>
-
-          <small>Pizzería</small>
+          <small>Pizzería & Grill</small>
         </div>
-      </div>
+      </a>
 
       <nav>
-        <a href="#carta">Carta</a>
-
         <a href="#locales">Locales</a>
-
+        <a href="#carta">Carta</a>
         <a href="#pedido">Pedir</a>
       </nav>
     </header>

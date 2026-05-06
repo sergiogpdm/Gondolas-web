@@ -1,46 +1,59 @@
 export default function Hero({ pizzeria }) {
   return (
     <section className="hero">
-      <div className="heroContent">
-        <span className="tag">
-          Desde 1989 · Pizzería Góndola
-        </span>
+      <div className="heroText">
+        <span className="eyebrow">Desde 1989 · Sabor italiano</span>
 
         <h1>
-          Elige tu Góndola y pide las mejores pizzas.
+          La pizza que apetece antes incluso de pedirla.
         </h1>
 
         <p>
-          Pizzas artesanas, hamburguesas y recetas
-          irresistibles.
+          Elige tu Góndola, descubre la carta de ese local y pide por WhatsApp
+          en segundos.
         </p>
 
         <div className="heroActions">
           <a
-            className="btnPrimary"
+            className="btn btnRed"
             href={`https://wa.me/${pizzeria.whatsapp}`}
             target="_blank"
           >
             Pedir por WhatsApp
           </a>
 
-          <a
-            className="btnSecondary"
-            href="#carta"
-          >
+          <a className="btn btnWhite" href="#carta">
             Ver carta
           </a>
         </div>
+
+        <div className="heroStats">
+          <div>
+            <strong>+35</strong>
+            <span>años</span>
+          </div>
+
+          <div>
+            <strong>100%</strong>
+            <span>recién hecho</span>
+          </div>
+
+          <div>
+            <strong>🔥</strong>
+            <span>horno caliente</span>
+          </div>
+        </div>
       </div>
 
-      <div className="heroCard">
-        <div className="pizzaCircle">🍕</div>
+      <div className="heroVisual">
+        <div className="pizzaBig">🍕</div>
 
-        <h3>{pizzeria.nombre}</h3>
-
-        <p>{pizzeria.direccion}</p>
-
-        <strong>{pizzeria.telefono}</strong>
+        <div className="heroPanel">
+          <span>{pizzeria.estado}</span>
+          <h3>{pizzeria.nombre}</h3>
+          <p>{pizzeria.direccion}</p>
+          <strong>{pizzeria.telefono}</strong>
+        </div>
       </div>
     </section>
   );
