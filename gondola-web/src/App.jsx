@@ -1,41 +1,50 @@
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { pizzerias } from "./data/pizzerias";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import PizzeriaSelector from "./components/PizzeriaSelector";
 import Menu from "./components/Menu";
+import Footer from "./components/Footer";
 import "./index.css";
 
 export default function App() {
   const [pizzeriaActual, setPizzeriaActual] = useState(pizzerias[0]);
   const [categoriaActiva, setCategoriaActiva] = useState("Todos");
+  const cartaRef = useRef(null);
 
   const categorias = useMemo(() => {
     const cats = pizzeriaActual.productos.map((p) => p.categoria);
     return ["Todos", ...new Set(cats)];
   }, [pizzeriaActual]);
 
+  function elegirPizzeria(pizzeria) {
+    setPizzeriaActual(pizzeria);
+    setCategoriaActiva("Todos");
+
+    setTimeout(() => {
+      cartaRef.current?.scrollIntoView({ behavior: "smooth" });
+    }, 100);
+  }
+
   return (
     <>
       <Header />
 
-      <Hero pizzeria={pizzeriaActual} />
-
-      <PizzeriaSelector
+      <Hero
         pizzerias={pizzerias}
-        actual={pizzeriaActual}
-        onSelect={(pizzeria) => {
-          setPizzeriaActual(pizzeria);
-          setCategoriaActiva("Todos");
-        }}
+        pizzeriaActual={pizzeriaActual}
+        onSelect={elegirPizzeria}
       />
 
-      <Menu
-        pizzeria={pizzeriaActual}
-        categorias={categorias}
-        categoriaActiva={categoriaActiva}
-        setCategoriaActiva={setCategoriaActiva}
-      />
+      <main ref={cartaRef}>
+        <Menu
+          pizzeria={pizzeriaActual}
+          categorias={categorias}
+          categoriaActiva={categoriaActiva}
+          setCategoriaActiva={setCategoriaActiva}
+        />
+      </main>
+
+      <Footer pizzeria={pizzeriaActual} />
 
       <a
         className="floatingOrder"

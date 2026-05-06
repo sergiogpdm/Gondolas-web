@@ -11,7 +11,7 @@ export default function Header() {
       </a>
 
       <nav>
-        <a href="#locales">Locales</a>
+        <a href="#">Inicio</a>
         <a href="#carta">Carta</a>
         <a href="#pedido">Pedir</a>
       </nav>

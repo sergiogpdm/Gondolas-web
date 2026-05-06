@@ -15,10 +15,10 @@ export default function Menu({
 
   return (
     <section className="menu" id="carta">
-      <div className="sectionHeader">
+      <div className="sectionHeader centered">
         <span>Carta digital</span>
         <h2>{pizzeria.nombre}</h2>
-        <p>Productos destacados, precios claros y pedido directo.</p>
+        <p>{pizzeria.direccion}</p>
       </div>
 
       <div className="categoryBar">
@@ -40,11 +40,9 @@ export default function Menu({
       </div>
 
       <div className="orderBox" id="pedido">
-        <span>Pedido rápido</span>
-        <h2>¿Ya sabes qué te apetece?</h2>
-        <p>
-          Contacta directamente con {pizzeria.nombre} y haz tu pedido.
-        </p>
+        <span>Pedido directo</span>
+        <h2>¿Ya lo tienes claro?</h2>
+        <p>Pide directamente en {pizzeria.nombre}.</p>
 
         <div className="orderActions">
           <a
@@ -52,7 +50,7 @@ export default function Menu({
             href={`https://wa.me/${pizzeria.whatsapp}`}
             target="_blank"
           >
-            Pedir por WhatsApp
+            WhatsApp
           </a>
 
           <a className="btn btnWhite" href={`tel:${pizzeria.telefono}`}>

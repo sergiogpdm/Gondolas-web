@@ -1,58 +1,49 @@
-export default function Hero({ pizzeria }) {
+export default function Hero({ pizzerias, pizzeriaActual, onSelect }) {
   return (
     <section className="hero">
       <div className="heroText">
-        <span className="eyebrow">Desde 1989 · Sabor italiano</span>
+        <span className="eyebrow">Góndola Pizzería & Grill</span>
 
         <h1>
-          La pizza que apetece antes incluso de pedirla.
+          Elige tu local.
+          <br />
+          Pide tu pizza.
         </h1>
 
         <p>
-          Elige tu Góndola, descubre la carta de ese local y pide por WhatsApp
-          en segundos.
+          Cada pizzería tiene su propia carta. Selecciona tu Góndola y descubre
+          qué puedes pedir hoy.
         </p>
 
-        <div className="heroActions">
-          <a
-            className="btn btnRed"
-            href={`https://wa.me/${pizzeria.whatsapp}`}
-            target="_blank"
-          >
-            Pedir por WhatsApp
-          </a>
-
-          <a className="btn btnWhite" href="#carta">
-            Ver carta
-          </a>
-        </div>
-
-        <div className="heroStats">
-          <div>
-            <strong>+35</strong>
-            <span>años</span>
-          </div>
-
-          <div>
-            <strong>100%</strong>
-            <span>recién hecho</span>
-          </div>
-
-          <div>
-            <strong>🔥</strong>
-            <span>horno caliente</span>
-          </div>
+        <div className="heroLocales">
+          {pizzerias.map((pizzeria) => (
+            <button
+              key={pizzeria.id}
+              onClick={() => onSelect(pizzeria)}
+              className={
+                pizzeriaActual.id === pizzeria.id
+                  ? "heroLocal active"
+                  : "heroLocal"
+              }
+            >
+              <span>{pizzeria.estado}</span>
+              <strong>{pizzeria.nombre}</strong>
+              <small>{pizzeria.direccion}</small>
+            </button>
+          ))}
         </div>
       </div>
 
-      <div className="heroVisual">
-        <div className="pizzaBig">🍕</div>
+      <div className="heroArt">
+        <div className="neonCircle"></div>
+        <div className="pizzaStage">
+          <span>🍕</span>
+        </div>
 
-        <div className="heroPanel">
-          <span>{pizzeria.estado}</span>
-          <h3>{pizzeria.nombre}</h3>
-          <p>{pizzeria.direccion}</p>
-          <strong>{pizzeria.telefono}</strong>
+        <div className="ticket">
+          <small>Local actual</small>
+          <h3>{pizzeriaActual.nombre}</h3>
+          <p>{pizzeriaActual.telefono}</p>
         </div>
       </div>
     </section>
