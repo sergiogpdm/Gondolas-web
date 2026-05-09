@@ -227,11 +227,13 @@ a {
   overflow: hidden;
   position: relative;
   background:
-    linear-gradient(90deg,
-      rgba(255, 241, 220, 0.96) 0%,
-      rgba(255, 241, 220, 0.92) 45%,
-      rgba(255, 241, 220, 0.5) 100%),
-    url("/src/assets/gondola-local.jpg");
+  linear-gradient(
+    90deg,
+    rgba(255, 241, 220, 0.96) 0%,
+    rgba(255, 241, 220, 0.92) 45%,
+    rgba(255, 241, 220, 0.5) 100%
+  );
+    
   background-size: cover;
   background-position: center;
 }
