@@ -1,7 +1,11 @@
+import { useState } from "react";
+
 export default function Header() {
+  const [menuAbierto, setMenuAbierto] = useState(false);
+
   return (
     <header className="header">
-      <a href="#" className="brand">
+      <a href="#" className="brand" onClick={() => setMenuAbierto(false)}>
         <span className="brandPole"></span>
 
         <div className="brandText">
@@ -10,11 +14,21 @@ export default function Header() {
         </div>
       </a>
 
-      <nav>
-        <a href="#">Inicio</a>
-        <a href="#carta">Carta</a>
-        <a href="#pedido">Llamar</a>
+      <nav className={menuAbierto ? "navMenu open" : "navMenu"}>
+        <a href="#" onClick={() => setMenuAbierto(false)}>Inicio</a>
+        <a href="#carta" onClick={() => setMenuAbierto(false)}>Carta</a>
+        <a href="#pedido" onClick={() => setMenuAbierto(false)}>Llamar</a>
       </nav>
+
+      <button
+        className={menuAbierto ? "hamburger active" : "hamburger"}
+        onClick={() => setMenuAbierto(!menuAbierto)}
+        aria-label="Abrir menú"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </header>
   );
 }
