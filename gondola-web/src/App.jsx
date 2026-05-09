@@ -72,6 +72,13 @@ export default function App() {
 
       <div className="floatingButtons">
         <a
+          className="floatingCategories"
+          href="#cartaCategorias"
+        >
+          🍕
+        </a>
+
+        <a
           className="floatingInstagram"
           href={pizzeriaActual.instagram}
           target="_blank"
@@ -87,9 +94,7 @@ export default function App() {
         </a>
       </div>
 
-      <a href="#cartaCategorias" className="floatingCategories">
-        🍕
-      </a>
+      
     </>
   );
 }

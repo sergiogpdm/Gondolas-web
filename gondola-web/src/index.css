@@ -1048,46 +1048,91 @@ nav a:hover {
 
 .floatingButtons {
   position: fixed;
-  right: 24px;
-  bottom: 24px;
+
+  right: 12px;
+  bottom: 12px;
+
   z-index: 100;
+
   display: flex;
   flex-direction: column;
-  gap: 14px;
+
+  gap: 8px;
 }
 
 .floatingOrder,
-.floatingInstagram {
-  width: 68px;
-  height: 68px;
+.floatingInstagram,
+.floatingCategories {
+  width: 50px;
+  height: 50px;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   border-radius: 50%;
+
   color: white;
-  font-size: 28px;
+
+  font-size: 19px;
+
   backdrop-filter: blur(10px);
-  box-shadow: 0 18px 46px rgba(0,0,0,0.24);
+
+  box-shadow:
+    0 14px 34px rgba(0,0,0,0.22);
+
   transition: 0.22s ease;
 }
 
 .floatingOrder:hover,
-.floatingInstagram:hover {
-  transform: translateY(-4px) scale(1.08);
+.floatingInstagram:hover,
+.floatingCategories:hover {
+  transform:
+    translateY(-4px)
+    scale(1.06);
 }
+
+/* TELEFONO */
 
 .floatingOrder {
-  background: linear-gradient(135deg, var(--red), var(--redDark));
-  box-shadow: 0 18px 46px rgba(214,40,40,0.34);
+  background:
+    linear-gradient(
+      135deg,
+      var(--red),
+      var(--redDark)
+    );
+
+  box-shadow:
+    0 14px 34px rgba(214,40,40,0.30);
 }
+
+/* INSTAGRAM */
 
 .floatingInstagram {
-  background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
-  box-shadow: 0 18px 46px rgba(131,58,180,0.28);
+  background:
+    linear-gradient(
+      135deg,
+      #833ab4,
+      #fd1d1d,
+      #fcb045
+    );
+
+  box-shadow:
+    0 14px 34px rgba(131,58,180,0.24);
 }
 
+/* CATEGORIAS */
+
 .floatingCategories {
-  display: none;
+  background:
+    linear-gradient(
+      135deg,
+      var(--blue),
+      var(--blueDark)
+    );
+
+  box-shadow:
+    0 14px 34px rgba(11,59,143,0.28);
 }
 
 /* MOBILE */
@@ -1238,39 +1283,43 @@ nav a:hover {
 
   .menuGrid {
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 8px;
   }
 
   .product,
   .productSpecial {
     grid-column: span 1;
     min-height: auto;
-    padding: 16px;
-    border-radius: 20px;
+    padding: 12px 14px;
+    border-radius: 16px;
     transform: none !important;
   }
 
   .product h3,
   .productSpecial h3 {
-    margin-top: 8px;
-    font-size: 20px;
+    margin-top: 6px;
+    font-size: 18px;
+    line-height: 1.05;
   }
 
   .product p {
-    margin-top: 6px;
-    font-size: 14px;
-    line-height: 1.35;
+    margin-top: 5px;
+    font-size: 13px;
+    line-height: 1.25;
   }
 
   .productBottom {
-    margin-top: 12px;
+    margin-top: 10px;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
+    gap: 10px;
   }
 
   .priceTag {
-    padding: 8px 12px;
-    border-radius: 14px;
+    padding: 7px 11px;
+    border-radius: 12px;
+    transform: rotate(-1deg);
   }
 
   .priceTag small {
@@ -1278,18 +1327,18 @@ nav a:hover {
   }
 
   .priceTag strong {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .productActions {
-    gap: 8px;
+    gap: 7px;
   }
 
   .productActions button {
-    width: 40px;
-    height: 40px;
-    border-radius: 14px;
-    font-size: 17px;
+    width: 36px;
+    height: 36px;
+    border-radius: 12px;
+    font-size: 15px;
   }
 
   .badge,
@@ -1297,9 +1346,9 @@ nav a:hover {
     position: static;
     display: inline-flex;
     width: fit-content;
-    margin-bottom: 6px;
-    font-size: 11px;
-    padding: 6px 10px;
+    margin-bottom: 4px;
+    font-size: 10px;
+    padding: 5px 9px;
   }
 
   .productTape,
@@ -1340,33 +1389,70 @@ nav a:hover {
   .footer {
     flex-direction: column;
   }
+}
 
-  .floatingButtons {
-    right: 18px;
-    bottom: 18px;
+@media (max-width: 950px) {
+  .product,
+  .productSpecial {
+    padding: 12px 14px;
+    border-radius: 16px;
+    min-height: auto;
   }
 
-  .floatingOrder,
-  .floatingInstagram {
-    width: 62px;
-    height: 62px;
-    font-size: 24px;
+  .product h3,
+  .productSpecial h3 {
+    margin-top: 6px;
+    font-size: 18px;
+    line-height: 1.05;
   }
 
-  .floatingCategories {
-    position: fixed;
-    left: 18px;
-    bottom: 18px;
-    z-index: 100;
-    width: 62px;
-    height: 62px;
+  .product p {
+    margin-top: 5px;
+    font-size: 13px;
+    line-height: 1.25;
+  }
+
+  .productHeader span {
+    font-size: 11px;
+  }
+
+  .productBottom {
+    margin-top: 10px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    font-size: 28px;
-    background: linear-gradient(135deg, var(--blue), var(--blueDark));
-    color: white;
-    box-shadow: 0 18px 40px rgba(11,59,143,0.32);
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .priceTag {
+    padding: 7px 11px;
+    border-radius: 12px;
+    transform: rotate(-1deg);
+  }
+
+  .priceTag strong {
+    font-size: 18px;
+  }
+
+  .productActions {
+    gap: 7px;
+  }
+
+  .productActions button {
+    width: 36px;
+    height: 36px;
+    border-radius: 12px;
+    font-size: 15px;
+  }
+
+  .badge,
+  .specialBadge {
+    font-size: 10px;
+    padding: 5px 9px;
+    margin-bottom: 4px;
+  }
+
+  .menuGrid {
+    gap: 8px;
   }
 }
