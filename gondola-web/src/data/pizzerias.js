@@ -5,6 +5,7 @@ export const pizzerias = [
     direccion: "Plaza Don Tomás Díaz Prieto",
     telefono: "633 152 056",
     whatsapp: "34633152056",
+    instagram: "https://www.instagram.com/gondola_mocejon/",
     estado: "Abierto hoy",
     destacado: "Especialidad en pizzas artesanas",
     productos: [
@@ -58,6 +59,7 @@ export const pizzerias = [
     direccion: "Toledo",
     telefono: "825 936 161",
     whatsapp: "34825936161",
+    instagram: "https://www.instagram.com/gondola_mocejon/",
     estado: "Pide para recoger",
     destacado: "Pizzas recién horneadas",
     productos: [

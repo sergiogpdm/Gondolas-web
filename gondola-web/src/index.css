@@ -900,118 +900,97 @@ nav a {
   color: rgba(255,255,255,0.72);
 }
 
-/* FLOATING BUTTON */
+/* FLOATING BUTTONS */
 
-.floatingOrder {
+.floatingButtons {
   position: fixed;
+
   right: 24px;
   bottom: 24px;
+
   z-index: 100;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.floatingOrder,
+.floatingInstagram {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 58px;
+
   padding: 16px 24px;
+
   border-radius: 999px;
+
+  color: white;
+
+  font-weight: 1000;
+
+  text-align: center;
+
+  backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 18px 46px rgba(0,0,0,0.24);
+
+  transition: 0.22s ease;
+}
+
+.floatingOrder:hover,
+.floatingInstagram:hover {
+  transform:
+    translateY(-4px)
+    scale(1.03);
+}
+
+/* CALL BUTTON */
+
+.floatingOrder {
   background:
     linear-gradient(
       135deg,
       var(--red),
       var(--redDark)
     );
-  color: white;
-  font-weight: 1000;
-  box-shadow: 0 18px 46px rgba(214,40,40,0.38);
+
+  box-shadow:
+    0 18px 46px rgba(214,40,40,0.34);
+}
+
+/* INSTAGRAM BUTTON */
+
+.floatingInstagram {
+  background:
+    linear-gradient(
+      135deg,
+      #833ab4,
+      #fd1d1d,
+      #fcb045
+    );
+
+  box-shadow:
+    0 18px 46px rgba(131,58,180,0.28);
 }
 
 /* MOBILE */
 
 @media (max-width: 950px) {
-  nav {
-    display: none;
-  }
-
-  .hero {
-    grid-template-columns: 1fr;
-    min-height: auto;
-    padding: 34px 6% 70px;
-  }
-
-  .heroLocalBanner {
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none;
-    width: 100%;
-    flex-direction: column;
-    gap: 4px;
-    text-align: center;
-    border-radius: 28px;
-    margin-bottom: 22px;
-  }
-
-  .hero h1 {
-    font-size: clamp(44px, 15vw, 66px);
-    letter-spacing: -3px;
-  }
-
-  .heroCollage {
-    min-height: 620px;
-  }
-
-  .pizzaSticker {
-    width: 190px;
-    top: 0;
-    left: 10px;
-    transform: rotate(-6deg);
-  }
-
-  .burgerSticker {
-    width: 130px;
-    top: 25px;
-    right: 5px;
-    left: auto;
-  }
-
-  .friesSticker {
-    width: 110px;
-    top: 220px;
-    left: 10px;
-  }
-
-  .buenoSticker {
-    width: 145px;
-    top: 250px;
-    right: 10px;
-    left: auto;
-  }
-
-  .heroOrderCard {
-    position: absolute;
-    top: 365px;
-    left: 0;
-    right: 0;
-    width: 100%;
-  }
-
-  .boardHeader {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .menuBoard {
-    padding: 26px;
-  }
-
-  .productBottom {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .footer {
-    flex-direction: column;
-  }
-
-  .floatingOrder {
+  .floatingButtons {
     left: 20px;
     right: 20px;
-    text-align: center;
+    bottom: 20px;
+  }
+
+  .floatingOrder,
+  .floatingInstagram {
+    width: 100%;
   }
 }
 

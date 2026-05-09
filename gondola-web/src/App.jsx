@@ -68,13 +68,22 @@ export default function App() {
 
       <Footer pizzeria={pizzeriaActual} />
 
-      <a
-        className="floatingOrder"
-        href={`https://wa.me/${pizzeriaActual.whatsapp}`}
-        target="_blank"
-      >
-        Pedir ahora
-      </a>
+      <div className="floatingButtons">
+        <a
+          className="floatingInstagram"
+          href={pizzeriaActual.instagram}
+          target="_blank"
+        >
+          Instagram
+        </a>
+
+        <a
+          className="floatingOrder"
+          href={`tel:${pizzeriaActual.telefono}`}
+        >
+          Llamar ahora
+        </a>
+      </div>
     </>
   );
 }
