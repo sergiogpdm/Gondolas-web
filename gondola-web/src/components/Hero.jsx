@@ -3,47 +3,38 @@ import burgerSticker from "../assets/stickers/hamburguesa.png";
 import friesSticker from "../assets/stickers/patatas.png";
 import buenoSticker from "../assets/stickers/top.png";
 
-export default function Hero({
-  pizzerias,
-  pizzeriaActual,
-  onSelect,
-}) {
+export default function Hero({ pizzerias, pizzeriaActual, onSelect }) {
   return (
     <section className="hero">
+      <div className="heroLocalBanner">
+        <span>Estás viendo la carta de</span>
+        <strong>{pizzeriaActual.nombre}</strong>
+        <small>{pizzeriaActual.direccion}</small>
+      </div>
+
       <div className="heroText">
-        <span className="eyebrow">
-          Góndola Pizzería & Grill
-        </span>
+        <span className="eyebrow">Góndola Pizzería & Grill</span>
 
         <h1>
-          Tu Góndola.
+          Pizzería Góndola
           <br />
-          Tus Pizzas de Siempre
+          <span className="heroHighlight">
+            Tus pizzas de siempre
+          </span>
         </h1>
 
         <p>
-          Selecciona el local más cercano y descubre
-          su carta al instante.
+          Estás viendo los productos y precios de este local.
+          Si quieres otra pizzería, cámbiala aquí abajo.
         </p>
-
-        <div className="currentLocal">
-          <span>Estás viendo ahora</span>
-
-          <strong>{pizzeriaActual.nombre}</strong>
-
-          <small>{pizzeriaActual.direccion}</small>
-        </div>
 
         <div className="localChooser">
           <div className="chooserTitle">
-            <span>1</span>
+            <span>📍</span>
 
             <div>
-              <strong>Elige tu local</strong>
-
-              <small>
-                La carta cambia según el local
-              </small>
+              <strong>Cambia de local</strong>
+              <small>La carta se actualiza automáticamente</small>
             </div>
           </div>
 
@@ -59,14 +50,11 @@ export default function Hero({
                 }
               >
                 <span>{pizzeria.estado}</span>
-
                 <strong>{pizzeria.nombre}</strong>
-
                 <small>{pizzeria.direccion}</small>
 
-                {pizzeriaActual.id ===
-                  pizzeria.id && (
-                  <em>Local seleccionado</em>
+                {pizzeriaActual.id === pizzeria.id && (
+                  <em>Viendo esta carta</em>
                 )}
               </button>
             ))}
@@ -77,45 +65,23 @@ export default function Hero({
       <div className="heroCollage">
         <div className="collageGlow"></div>
 
-        <img
-          src={pizzaSticker}
-          className="sticker pizzaSticker"
-        />
-
-        <img
-          src={burgerSticker}
-          className="sticker burgerSticker"
-        />
-
-        <img
-          src={friesSticker}
-          className="sticker friesSticker"
-        />
-
-        <img
-          src={buenoSticker}
-          className="sticker buenoSticker"
-        />
+        <img src={pizzaSticker} className="sticker pizzaSticker" />
+        <img src={burgerSticker} className="sticker burgerSticker" />
+        <img src={friesSticker} className="sticker friesSticker" />
+        <img src={buenoSticker} className="sticker buenoSticker" />
 
         <div className="heroOrderCard">
-          <span>Pedido rápido</span>
+          <span>Pedido en</span>
 
-          <h3>
-            Pizzas recién
-            <br />
-            horneadas
-          </h3>
+          <h3>{pizzeriaActual.nombre}</h3>
 
           <p>
-            Haz tu pedido en segundos desde
-            {` ${pizzeriaActual.nombre}`}
+            Haz tu pedido directamente por teléfono en{" "}
+            {pizzeriaActual.nombre}
           </p>
 
-          <a
-            href={`https://wa.me/${pizzeriaActual.whatsapp}`}
-            target="_blank"
-          >
-            Pedir ahora
+          <a href={`tel:${pizzeriaActual.telefono}`}>
+            Llamar al local
           </a>
         </div>
       </div>

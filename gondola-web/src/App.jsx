@@ -9,6 +9,8 @@ import "./index.css";
 export default function App() {
   const [pizzeriaActual, setPizzeriaActual] = useState(pizzerias[0]);
   const [categoriaActiva, setCategoriaActiva] = useState("Todos");
+
+  const heroRef = useRef(null);
   const cartaRef = useRef(null);
 
   const categorias = useMemo(() => {
@@ -25,15 +27,35 @@ export default function App() {
     }, 100);
   }
 
+  function volverASelector() {
+    heroRef.current?.scrollIntoView({ behavior: "smooth" });
+  }
+
   return (
     <>
       <Header />
 
-      <Hero
-        pizzerias={pizzerias}
-        pizzeriaActual={pizzeriaActual}
-        onSelect={elegirPizzeria}
-      />
+      <div className="activeLocationBar">
+        <div className="activeLocationContent">
+          <span>📍 Local activo</span>
+
+          <strong>{pizzeriaActual.nombre}</strong>
+
+          <small>Carta, precios y pedidos de este local</small>
+        </div>
+
+        <button onClick={volverASelector}>
+          Cambiar local
+        </button>
+      </div>
+
+      <div ref={heroRef}>
+        <Hero
+          pizzerias={pizzerias}
+          pizzeriaActual={pizzeriaActual}
+          onSelect={elegirPizzeria}
+        />
+      </div>
 
       <main ref={cartaRef}>
         <Menu
