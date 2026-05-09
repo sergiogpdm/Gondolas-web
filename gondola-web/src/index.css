@@ -1456,3 +1456,89 @@ nav a:hover {
     gap: 8px;
   }
 }
+
+@media (max-width: 950px) {
+  .hero {
+    padding: 18px 5% 34px;
+    gap: 18px;
+  }
+
+  .heroLocalBanner {
+    margin-bottom: 14px;
+    padding: 12px 16px;
+  }
+
+  .hero h1 {
+    margin-top: 10px;
+    font-size: clamp(40px, 13vw, 58px);
+    line-height: 0.88;
+  }
+
+  .hero p {
+    margin-top: 14px;
+    font-size: 17px;
+    line-height: 1.45;
+  }
+
+  .localChooser {
+    margin-top: 18px;
+    padding: 16px;
+    border-radius: 28px;
+  }
+
+  .heroCollage {
+    min-height: 430px;
+    margin-top: -10px;
+  }
+
+  .collageGlow {
+    width: 320px;
+    height: 320px;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+  }
+
+  .pizzaSticker {
+    width: 160px;
+    top: 0;
+    left: 18px;
+  }
+
+  .burgerSticker {
+    width: 105px;
+    top: 8px;
+    right: 18px;
+  }
+
+  .friesSticker {
+    width: 92px;
+    top: 155px;
+    left: 32px;
+  }
+
+  .buenoSticker {
+    width: 125px;
+    top: 160px;
+    right: 36px;
+  }
+
+  .heroOrderCard {
+    top: 250px;
+    padding: 24px;
+    border-radius: 30px;
+  }
+
+  .heroOrderCard h3 {
+    font-size: 34px;
+  }
+
+  .heroOrderCard p {
+    font-size: 15px;
+  }
+
+  .heroOrderCard a {
+    margin-top: 16px;
+    padding: 14px 18px;
+  }
+}
