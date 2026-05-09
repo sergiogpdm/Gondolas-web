@@ -69,6 +69,7 @@ export const pizzerias = [
         precio: 9.9,
         categoria: "Pizzas",
         popular: true,
+        especial: "Pizza del mes",
       },
       {
         nombre: "Pizza Diavola",

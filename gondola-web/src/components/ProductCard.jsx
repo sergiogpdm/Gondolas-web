@@ -1,7 +1,23 @@
 export default function ProductCard({ producto }) {
+  const esEspecial = producto.especial;
+
   return (
-    <article className={producto.popular ? "product popular" : "product"}>
-      {producto.popular && <span className="badge">Más pedido</span>}
+    <article
+      className={
+        esEspecial
+          ? "product productSpecial"
+          : producto.popular
+          ? "product popular"
+          : "product"
+      }
+    >
+      {producto.popular && !esEspecial && (
+        <span className="badge">Más pedido</span>
+      )}
+
+      {esEspecial && (
+        <span className="specialBadge">{producto.especial}</span>
+      )}
 
       <div className="productTape"></div>
 
@@ -16,18 +32,12 @@ export default function ProductCard({ producto }) {
       <div className="productBottom">
         <div className="priceTag">
           <small>Precio</small>
-
           <strong>{producto.precio.toFixed(2)} €</strong>
         </div>
 
         <div className="productActions">
-          <button className="photoBtn">
-            📸
-          </button>
-
-          <button className="allergenBtn">
-            ⚠️
-          </button>
+          <button className="photoBtn">📸</button>
+          <button className="allergenBtn">⚠️</button>
         </div>
       </div>
     </article>

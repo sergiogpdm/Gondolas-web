@@ -39,29 +39,21 @@ a {
   position: sticky;
   top: 0;
   z-index: 100;
-
   height: 86px;
   padding: 0 7%;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   background: rgba(255, 241, 220, 0.82);
   backdrop-filter: blur(18px);
-
   border-bottom: 1px solid rgba(4, 25, 67, 0.08);
-
-  box-shadow:
-    0 10px 30px rgba(0,0,0,0.06);
-
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
   transition: 0.25s ease;
 }
 
 .header:hover {
   background: rgba(255, 248, 238, 0.96);
-  box-shadow:
-    0 18px 45px rgba(0,0,0,0.12);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.12);
 }
 
 .brand {
@@ -73,22 +65,15 @@ a {
 .brandPole {
   width: 24px;
   height: 58px;
-
   border-radius: 6px;
-
-  background:
-    repeating-linear-gradient(
-      -35deg,
-      var(--red) 0 9px,
-      white 9px 18px
-    );
-
+  background: repeating-linear-gradient(
+    -35deg,
+    var(--red) 0 9px,
+    white 9px 18px
+  );
   border: 2px solid var(--blue);
-
   position: relative;
-
-  box-shadow:
-    0 8px 20px rgba(214,40,40,0.22);
+  box-shadow: 0 8px 20px rgba(214,40,40,0.22);
 }
 
 .brandPole::before {
@@ -96,12 +81,9 @@ a {
   position: absolute;
   top: -8px;
   left: 50%;
-
   width: 10px;
   height: 10px;
-
   transform: translateX(-50%);
-
   border-radius: 50%;
   background: var(--blue);
 }
@@ -139,10 +121,8 @@ nav {
 nav a {
   padding: 12px 18px;
   border-radius: 999px;
-
   color: var(--blueDark);
   font-weight: 1000;
-
   transition: 0.2s ease;
 }
 
@@ -152,28 +132,54 @@ nav a:hover {
   transform: translateY(-2px);
 }
 
-@media (max-width: 950px) {
-  .header {
-    height: 78px;
-    padding: 0 6%;
-  }
+/* ACTIVE LOCATION BAR */
 
-  .brandPole {
-    width: 20px;
-    height: 50px;
-  }
+.activeLocationBar {
+  position: sticky;
+  top: 86px;
+  z-index: 90;
+  width: 100%;
+  padding: 14px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: linear-gradient(135deg, var(--blueDark), var(--blue));
+  color: white;
+  box-shadow: 0 14px 34px rgba(0,0,0,0.14);
+}
 
-  .brandText span {
-    font-size: 15px;
-  }
+.activeLocationContent {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
 
-  .brandText strong {
-    font-size: 30px;
-  }
+.activeLocationContent span {
+  color: var(--yellow);
+  font-size: 12px;
+  font-weight: 1000;
+  text-transform: uppercase;
+}
 
-  nav {
-    display: none;
-  }
+.activeLocationContent strong {
+  font-size: 22px;
+}
+
+.activeLocationContent small {
+  opacity: 0.76;
+}
+
+.activeLocationBar button {
+  cursor: pointer;
+  border: 0;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: white;
+  color: var(--blueDark);
+  font-weight: 1000;
+  white-space: nowrap;
 }
 
 /* HERO */
@@ -257,19 +263,6 @@ nav a:hover {
   opacity: 0.75;
 }
 
-/* HERO TEXT */
-
-.sectionHeader span,
-.orderBox span {
-  display: inline-flex;
-  padding: 10px 16px;
-  border-radius: 999px;
-  background: white;
-  color: var(--red);
-  font-weight: 1000;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
-}
-
 .hero h1 {
   margin-top: 18px;
   max-width: 780px;
@@ -282,35 +275,20 @@ nav a:hover {
 
 .heroHighlight {
   display: block;
-
   color: var(--red);
-
-  text-shadow:
-    0 10px 28px rgba(214,40,40,0.18);
-
+  text-shadow: 0 10px 28px rgba(214,40,40,0.18);
   position: relative;
 }
 
 .heroHighlight::after {
   content: "";
-
   position: absolute;
-
   left: 0;
   bottom: -10px;
-
   width: 180px;
   height: 10px;
-
   border-radius: 999px;
-
-  background:
-    linear-gradient(
-      90deg,
-      var(--red),
-      transparent
-    );
-
+  background: linear-gradient(90deg, var(--red), transparent);
   opacity: 0.35;
 }
 
@@ -551,12 +529,7 @@ nav a:hover {
   margin-top: 22px;
   padding: 16px 22px;
   border-radius: 999px;
-  background:
-    linear-gradient(
-      135deg,
-      var(--red),
-      var(--redDark)
-    );
+  background: linear-gradient(135deg, var(--red), var(--redDark));
   color: white;
   font-weight: 1000;
   box-shadow: 0 16px 34px rgba(214,40,40,0.28);
@@ -632,13 +605,22 @@ nav a:hover {
   font-size: 19px;
 }
 
+/* CATEGORIES */
+
 .categoryBar {
+  position: sticky;
+  top: 100px;
+  z-index: 30;
   margin: 34px auto 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 14px;
-  padding-bottom: 8px;
+  padding: 14px;
+  border-radius: 999px;
+  background: rgba(80, 28, 18, 0.72);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.22);
 }
 
 .categoryBar button {
@@ -649,6 +631,7 @@ nav a:hover {
   background: var(--blue);
   color: white;
   font-weight: 1000;
+  white-space: nowrap;
   box-shadow: 0 16px 34px rgba(0,0,0,0.22);
   transition: 0.2s ease;
 }
@@ -661,6 +644,8 @@ nav a:hover {
   background: var(--red);
   transform: translateY(-4px) rotate(-2deg);
 }
+
+/* MENU BOARD */
 
 .menuBoard {
   position: relative;
@@ -736,6 +721,8 @@ nav a:hover {
   gap: 28px;
 }
 
+/* PRODUCT */
+
 .product {
   position: relative;
   min-height: 285px;
@@ -786,6 +773,45 @@ nav a:hover {
   font-weight: 1000;
 }
 
+.productSpecial {
+  grid-column: span 2;
+  min-height: 320px;
+  background:
+    radial-gradient(circle at top right, rgba(255,200,87,0.35), transparent 34%),
+    linear-gradient(135deg, #fff8ed, #ffffff);
+  border: 4px solid var(--yellow);
+}
+
+.productSpecial::before {
+  content: "⭐";
+  position: absolute;
+  right: 28px;
+  bottom: 24px;
+  font-size: 88px;
+  opacity: 0.12;
+}
+
+.specialBadge {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--yellow), #ff9f1c);
+  color: var(--blueDark);
+  font-size: 13px;
+  font-weight: 1000;
+  box-shadow: 0 14px 30px rgba(255, 159, 28, 0.28);
+}
+
+.productSpecial h3 {
+  font-size: 42px;
+}
+
+.productSpecial .priceTag {
+  background: linear-gradient(135deg, var(--blue), var(--blueDark));
+}
+
 .productHeader {
   display: flex;
   justify-content: space-between;
@@ -823,12 +849,7 @@ nav a:hover {
   width: fit-content;
   padding: 14px 18px;
   border-radius: 20px;
-  background:
-    linear-gradient(
-      135deg,
-      var(--red),
-      var(--redDark)
-    );
+  background: linear-gradient(135deg, var(--red), var(--redDark));
   color: white;
   box-shadow: 0 18px 36px rgba(214,40,40,0.24);
   transform: rotate(-2deg);
@@ -867,39 +888,53 @@ nav a:hover {
 }
 
 .photoBtn {
-  background:
-    linear-gradient(
-      135deg,
-      var(--blue),
-      var(--blueDark)
-    );
+  background: linear-gradient(135deg, var(--blue), var(--blueDark));
   color: white;
   transform: rotate(-4deg);
 }
 
 .photoBtn:hover {
-  transform:
-    translateY(-4px)
-    rotate(0deg)
-    scale(1.06);
+  transform: translateY(-4px) rotate(0deg) scale(1.06);
 }
 
 .allergenBtn {
-  background:
-    linear-gradient(
-      135deg,
-      #ffb703,
-      #fb8500
-    );
+  background: linear-gradient(135deg, #ffb703, #fb8500);
   color: white;
   transform: rotate(4deg);
 }
 
 .allergenBtn:hover {
-  transform:
-    translateY(-4px)
-    rotate(0deg)
-    scale(1.06);
+  transform: translateY(-4px) rotate(0deg) scale(1.06);
+}
+
+/* PAGINATION */
+
+.menuPagination {
+  margin-top: 28px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.loadMoreBtn,
+.backToTopBtn {
+  cursor: pointer;
+  border: 0;
+  padding: 15px 22px;
+  border-radius: 999px;
+  font-weight: 1000;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.16);
+}
+
+.loadMoreBtn {
+  background: linear-gradient(135deg, var(--red), var(--redDark));
+  color: white;
+}
+
+.backToTopBtn {
+  background: white;
+  color: var(--blueDark);
 }
 
 /* CALL BOX */
@@ -908,178 +943,81 @@ nav a:hover {
   margin-top: 76px;
   padding: 38px;
   border-radius: 42px;
-
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 28px;
-
   color: white;
-
   background:
     radial-gradient(
       circle at top left,
       rgba(255,255,255,0.18),
       transparent 34%
     ),
-    linear-gradient(
-      135deg,
-      var(--blueDark),
-      var(--blue)
-    );
-
+    linear-gradient(135deg, var(--blueDark), var(--blue));
   box-shadow: var(--shadow);
-
   border: 4px solid rgba(255,255,255,0.16);
 }
 
 .callIcon {
   width: 110px;
   height: 110px;
-
   display: grid;
   place-items: center;
-
   border-radius: 32px;
-
-  background:
-    linear-gradient(
-      135deg,
-      var(--red),
-      var(--redDark)
-    );
-
+  background: linear-gradient(135deg, var(--red), var(--redDark));
   font-size: 58px;
-
-  box-shadow:
-    0 22px 45px rgba(214,40,40,0.32);
-
+  box-shadow: 0 22px 45px rgba(214,40,40,0.32);
   transform: rotate(-4deg);
 }
 
 .callContent span {
   display: inline-flex;
-
   padding: 9px 14px;
-
   border-radius: 999px;
-
   background: white;
-
   color: var(--red);
-
   font-size: 12px;
-
   font-weight: 1000;
-
   text-transform: uppercase;
 }
 
 .callContent h2 {
   margin-top: 14px;
-
   font-size: clamp(34px, 4vw, 58px);
-
   line-height: 0.95;
 }
 
 .callContent p {
   margin-top: 12px;
-
   color: rgba(255,255,255,0.78);
-
   font-size: 18px;
 }
 
 .callContent strong {
   display: block;
-
   margin-top: 14px;
-
   color: var(--yellow);
-
   font-size: 32px;
 }
 
 .callButton {
   display: inline-flex;
-
   align-items: center;
   justify-content: center;
-
   min-height: 62px;
-
   padding: 0 30px;
-
   border-radius: 999px;
-
-  background:
-    linear-gradient(
-      135deg,
-      var(--red),
-      var(--redDark)
-    );
-
+  background: linear-gradient(135deg, var(--red), var(--redDark));
   color: white;
-
   font-weight: 1000;
-
-  box-shadow:
-    0 18px 38px rgba(214,40,40,0.32);
-
+  box-shadow: 0 18px 38px rgba(214,40,40,0.32);
   transition: 0.22s ease;
-
   white-space: nowrap;
 }
 
 .callButton:hover {
-  transform:
-    translateY(-4px)
-    scale(1.03);
-}
-
-@media (max-width: 950px) {
-  .callBox {
-    grid-template-columns: 1fr;
-    text-align: center;
-    padding: 34px 24px;
-  }
-
-  .callIcon {
-    margin: 0 auto;
-  }
-
-  .callButton {
-    width: 100%;
-  }
-}
-
-/* BUTTONS */
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 54px;
-  padding: 0 28px;
-  border-radius: 999px;
-  font-weight: 1000;
-  transition: 0.2s ease;
-}
-
-.btn:hover {
-  transform: translateY(-3px);
-}
-
-.btnRed {
-  background: linear-gradient(135deg, var(--red), var(--redDark));
-  color: white;
-  box-shadow: 0 16px 40px rgba(214,40,40,0.3);
-}
-
-.btnWhite {
-  background: white;
-  color: var(--blue);
+  transform: translateY(-4px) scale(1.03);
 }
 
 /* FOOTER */
@@ -1110,15 +1048,11 @@ nav a:hover {
 
 .floatingButtons {
   position: fixed;
-
   right: 24px;
   bottom: 24px;
-
   z-index: 100;
-
   display: flex;
   flex-direction: column;
-
   gap: 14px;
 }
 
@@ -1126,65 +1060,287 @@ nav a:hover {
 .floatingInstagram {
   width: 68px;
   height: 68px;
-
   display: flex;
-
   align-items: center;
   justify-content: center;
-
   border-radius: 50%;
-
   color: white;
-
   font-size: 28px;
-
   backdrop-filter: blur(10px);
-
-  box-shadow:
-    0 18px 46px rgba(0,0,0,0.24);
-
+  box-shadow: 0 18px 46px rgba(0,0,0,0.24);
   transition: 0.22s ease;
 }
 
 .floatingOrder:hover,
 .floatingInstagram:hover {
-  transform:
-    translateY(-4px)
-    scale(1.08);
+  transform: translateY(-4px) scale(1.08);
 }
-
-/* CALL BUTTON */
 
 .floatingOrder {
-  background:
-    linear-gradient(
-      135deg,
-      var(--red),
-      var(--redDark)
-    );
-
-  box-shadow:
-    0 18px 46px rgba(214,40,40,0.34);
+  background: linear-gradient(135deg, var(--red), var(--redDark));
+  box-shadow: 0 18px 46px rgba(214,40,40,0.34);
 }
 
-/* INSTAGRAM BUTTON */
-
 .floatingInstagram {
-  background:
-    linear-gradient(
-      135deg,
-      #833ab4,
-      #fd1d1d,
-      #fcb045
-    );
+  background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+  box-shadow: 0 18px 46px rgba(131,58,180,0.28);
+}
 
-  box-shadow:
-    0 18px 46px rgba(131,58,180,0.28);
+.floatingCategories {
+  display: none;
 }
 
 /* MOBILE */
 
 @media (max-width: 950px) {
+  .header {
+    height: 78px;
+    padding: 0 6%;
+  }
+
+  .brandPole {
+    width: 20px;
+    height: 50px;
+  }
+
+  .brandText span {
+    font-size: 15px;
+  }
+
+  .brandText strong {
+    font-size: 30px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .activeLocationBar {
+    display: none;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding: 34px 6% 70px;
+  }
+
+  .heroLocalBanner {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 4px;
+    text-align: center;
+    border-radius: 28px;
+    margin-bottom: 22px;
+  }
+
+  .hero h1 {
+    font-size: clamp(44px, 15vw, 66px);
+    letter-spacing: -3px;
+  }
+
+  .heroCollage {
+    min-height: 620px;
+  }
+
+  .pizzaSticker {
+    width: 190px;
+    top: 0;
+    left: 10px;
+    transform: rotate(-6deg);
+  }
+
+  .burgerSticker {
+    width: 130px;
+    top: 25px;
+    right: 5px;
+    left: auto;
+  }
+
+  .friesSticker {
+    width: 110px;
+    top: 220px;
+    left: 10px;
+  }
+
+  .buenoSticker {
+    width: 145px;
+    top: 250px;
+    right: 10px;
+    left: auto;
+  }
+
+  .heroOrderCard {
+    position: absolute;
+    top: 365px;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+
+  .menu {
+    padding: 48px 4% 70px;
+  }
+
+  .menuTop h2 {
+    font-size: 42px;
+    letter-spacing: -2px;
+  }
+
+  .menuTop p {
+    font-size: 16px;
+  }
+
+  .categoryBar {
+    top: 78px;
+    z-index: 80;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-inline: -8px;
+    border-radius: 22px;
+    padding: 10px;
+  }
+
+  .categoryBar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .categoryBar button {
+    flex-shrink: 0;
+    padding: 11px 18px;
+    font-size: 14px;
+  }
+
+  .menuBoard {
+    padding: 16px;
+    border-radius: 30px;
+  }
+
+  .boardHeader {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 16px;
+  }
+
+  .boardHeader h3 {
+    font-size: 32px;
+  }
+
+  .boardHeader strong {
+    padding: 9px 13px;
+    font-size: 13px;
+  }
+
+  .menuGrid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .product,
+  .productSpecial {
+    grid-column: span 1;
+    min-height: auto;
+    padding: 16px;
+    border-radius: 20px;
+    transform: none !important;
+  }
+
+  .product h3,
+  .productSpecial h3 {
+    margin-top: 8px;
+    font-size: 20px;
+  }
+
+  .product p {
+    margin-top: 6px;
+    font-size: 14px;
+    line-height: 1.35;
+  }
+
+  .productBottom {
+    margin-top: 12px;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .priceTag {
+    padding: 8px 12px;
+    border-radius: 14px;
+  }
+
+  .priceTag small {
+    display: none;
+  }
+
+  .priceTag strong {
+    font-size: 20px;
+  }
+
+  .productActions {
+    gap: 8px;
+  }
+
+  .productActions button {
+    width: 40px;
+    height: 40px;
+    border-radius: 14px;
+    font-size: 17px;
+  }
+
+  .badge,
+  .specialBadge {
+    position: static;
+    display: inline-flex;
+    width: fit-content;
+    margin-bottom: 6px;
+    font-size: 11px;
+    padding: 6px 10px;
+  }
+
+  .productTape,
+  .productSpecial::before {
+    display: none;
+  }
+
+  .menuPagination {
+    position: sticky;
+    bottom: 18px;
+    z-index: 50;
+    padding: 10px;
+    border-radius: 24px;
+    background: rgba(255, 241, 220, 0.82);
+    backdrop-filter: blur(12px);
+  }
+
+  .loadMoreBtn,
+  .backToTopBtn {
+    width: 100%;
+    padding: 14px 16px;
+  }
+
+  .callBox {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 34px 24px;
+  }
+
+  .callIcon {
+    margin: 0 auto;
+  }
+
+  .callButton {
+    width: 100%;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
+
   .floatingButtons {
     right: 18px;
     bottom: 18px;
@@ -1194,74 +1350,23 @@ nav a:hover {
   .floatingInstagram {
     width: 62px;
     height: 62px;
-
     font-size: 24px;
   }
-}
 
-.activeLocationBar {
-  position: sticky;
-  top: 86px;
-  z-index: 90;
-  width: 100%;
-  padding: 14px 7%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  background: linear-gradient(135deg, var(--blueDark), var(--blue));
-  color: white;
-  box-shadow: 0 14px 34px rgba(0,0,0,0.14);
-}
-
-.activeLocationContent {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  flex-wrap: wrap;
-}
-
-.activeLocationContent span {
-  color: var(--yellow);
-  font-size: 12px;
-  font-weight: 1000;
-  text-transform: uppercase;
-}
-
-.activeLocationContent strong {
-  font-size: 22px;
-}
-
-.activeLocationContent small {
-  opacity: 0.76;
-}
-
-.activeLocationBar button {
-  cursor: pointer;
-  border: 0;
-  padding: 12px 18px;
-  border-radius: 999px;
-  background: white;
-  color: var(--blueDark);
-  font-weight: 1000;
-  white-space: nowrap;
-}
-
-@media (max-width: 950px) {
-  .activeLocationBar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 16px 6%;
-    top: 78px;
-  }
-
-  .activeLocationContent {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 2px;
-  }
-
-  .activeLocationBar button {
-    width: 100%;
+  .floatingCategories {
+    position: fixed;
+    left: 18px;
+    bottom: 18px;
+    z-index: 100;
+    width: 62px;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 28px;
+    background: linear-gradient(135deg, var(--blue), var(--blueDark));
+    color: white;
+    box-shadow: 0 18px 40px rgba(11,59,143,0.32);
   }
 }

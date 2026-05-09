@@ -1,4 +1,7 @@
+import { useMemo, useState } from "react";
 import ProductCard from "./ProductCard";
+
+const LIMITE_INICIAL = 6;
 
 export default function Menu({
   pizzeria,
@@ -6,12 +9,40 @@ export default function Menu({
   categoriaActiva,
   setCategoriaActiva,
 }) {
-  const productosFiltrados =
-    categoriaActiva === "Todos"
+  const [limiteVisible, setLimiteVisible] = useState(LIMITE_INICIAL);
+
+  const productosFiltrados = useMemo(() => {
+    return categoriaActiva === "Todos"
       ? pizzeria.productos
       : pizzeria.productos.filter(
-        (producto) => producto.categoria === categoriaActiva
-      );
+          (producto) => producto.categoria === categoriaActiva
+        );
+  }, [categoriaActiva, pizzeria.productos]);
+
+  const productosVisibles = productosFiltrados.slice(0, limiteVisible);
+
+  function cambiarCategoria(categoria) {
+    setCategoriaActiva(categoria);
+    setLimiteVisible(LIMITE_INICIAL);
+
+    setTimeout(() => {
+      document
+        .getElementById("menuBoard")
+        ?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 80);
+  }
+
+  function verMas() {
+    setLimiteVisible((actual) => actual + 6);
+  }
+
+  function subirCarta() {
+    document
+      .getElementById("menuBoard")
+      ?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  const quedanProductos = productosFiltrados.length - productosVisibles.length;
 
   return (
     <section className="menu" id="carta">
@@ -26,11 +57,11 @@ export default function Menu({
           </p>
         </div>
 
-        <div className="categoryBar">
+        <div className="categoryBar" id="cartaCategorias">
           {categorias.map((categoria) => (
             <button
               key={categoria}
-              onClick={() => setCategoriaActiva(categoria)}
+              onClick={() => cambiarCategoria(categoria)}
               className={categoriaActiva === categoria ? "active" : ""}
             >
               {categoria}
@@ -38,7 +69,7 @@ export default function Menu({
           ))}
         </div>
 
-        <div className="menuBoard">
+        <div className="menuBoard" id="menuBoard">
           <div className="boardHeader">
             <div>
               <span>Ahora viendo</span>
@@ -49,16 +80,29 @@ export default function Menu({
           </div>
 
           <div className="menuGrid">
-            {productosFiltrados.map((producto) => (
+            {productosVisibles.map((producto) => (
               <ProductCard key={producto.nombre} producto={producto} />
             ))}
+          </div>
+
+          <div className="menuPagination">
+            {quedanProductos > 0 && (
+              <button onClick={verMas} className="loadMoreBtn">
+                Ver más {categoriaActiva.toLowerCase()} · quedan{" "}
+                {quedanProductos}
+              </button>
+            )}
+
+            {productosFiltrados.length > LIMITE_INICIAL && (
+              <button onClick={subirCarta} className="backToTopBtn">
+                Volver arriba de la carta
+              </button>
+            )}
           </div>
         </div>
 
         <div className="callBox" id="pedido">
-          <div className="callIcon">
-            🛵
-          </div>
+          <div className="callIcon">🛵</div>
 
           <div className="callContent">
             <span>Pedido por teléfono</span>
@@ -72,10 +116,7 @@ export default function Menu({
             <strong>{pizzeria.telefono}</strong>
           </div>
 
-          <a
-            className="callButton"
-            href={`tel:${pizzeria.telefono}`}
-          >
+          <a className="callButton" href={`tel:${pizzeria.telefono}`}>
             Llamar ahora
           </a>
         </div>

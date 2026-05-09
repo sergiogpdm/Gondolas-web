@@ -86,6 +86,10 @@ export default function App() {
           <FaPhoneAlt />
         </a>
       </div>
+
+      <a href="#cartaCategorias" className="floatingCategories">
+        🍕
+      </a>
     </>
   );
 }
