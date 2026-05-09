@@ -3,7 +3,7 @@ export default function Footer({ pizzeria }) {
     <footer className="footer">
       <div>
         <h2>GÓNDOLA</h2>
-        <p>Pizzería & Grill · Sabor italiano desde 1989.</p>
+        <p>Pizzería Góndola · Tus pizzas de siempre.</p>
       </div>
 
       <div>

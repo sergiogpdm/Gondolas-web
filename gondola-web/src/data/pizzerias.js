@@ -1,4 +1,461 @@
 export const pizzerias = [
+
+  {
+    id: "membrilla",
+    nombre: "Góndola Membrilla",
+    direccion: "Pl. Grande, 13230 Membrilla, Ciudad Real",
+    telefono: "615949364",
+    whatsapp: "615949364",
+    instagram: "https://www.instagram.com/pizzeriagondola_membrilla/",
+    estado: "Carta disponible",
+    destacado: "Pizzas, bocadillos, hamburguesas y mucho más",
+    horario: {
+      estado: "Abierto hoy",
+      hoy: "Consultar horario",
+    },
+    productos: [
+      {
+        nombre: "Pizza 4 Quesos",
+        descripcion: "Tomate, mozzarella, emmental, cheddar y gouda. Familiar: 16.00 €.",
+        precio: 8,
+        categoria: "Pizzas",
+      },
+      {
+        nombre: "Pizza Ahumados",
+        descripcion: "Tomate natural, palometa, salmón, anchoas y alcaparras. Familiar: 17.00 €.",
+        precio: 8.5,
+        categoria: "Pizzas",
+      },
+      {
+        nombre: "Pizza Americana",
+        descripcion: "Tomate, mozzarella y Frankfurt. Familiar: 16.00 €.",
+        precio: 8,
+        categoria: "Pizzas",
+      },
+      {
+        nombre: "Pizza Bacon",
+        descripcion: "Tomate, mozzarella, bacon y champiñón. Familiar: 15.00 €.",
+        precio: 7.5,
+        categoria: "Pizzas",
+      },
+      {
+        nombre: "Pizza Bacon-Atún",
+        descripcion: "Tomate, mozzarella, bacon, champiñón y atún. Familiar: 17.00 €.",
+        precio: 8,
+        categoria: "Pizzas",
+      },
+      {
+        nombre: "Pizza Barbacoa",
+        descripcion: "Salsa barbacoa, mozzarella y carne. Familiar: 16.00 €.",
+        precio: 8,
+        categoria: "Pizzas",
+        popular: true,
+      },
+      {
+        nombre: "Pizza Carramelizada",
+        descripcion: "Tomate, mozzarella y cebolla caramelizada. Familiar: 17.00 €.",
+        precio: 8.5,
+        categoria: "Pizzas",
+      },
+      {
+        nombre: "Pizza Calzone",
+        descripcion: "Pizza doblada con tomate, mozzarella, york y champiñón.",
+        precio: 8,
+        categoria: "Pizzas",
+      },
+      {
+        nombre: "Pizza Campera",
+        descripcion: "Salsa barbacoa, mozzarella, pollo, pimiento y cebolla. Familiar: 17.00 €.",
+        precio: 8.5,
+        categoria: "Pizzas",
+      },
+      {
+        nombre: "Pizza Caprichosa",
+        descripcion: "Tomate, mozzarella, alcachofa y cebolla. Familiar: 15.00 €.",
+        precio: 7.5,
+        categoria: "Pizzas",
+      },
+      {
+        nombre: "Pizza Carbonara",
+        descripcion: "Mozzarella y bacon. Familiar: 17.00 €.",
+        precio: 8.5,
+        categoria: "Pizzas",
+        popular: true,
+      },
+      {
+        nombre: "Pizza Carne",
+        descripcion: "Tomate, mozzarella, cebolla y carne. Familiar: 17.00 €.",
+        precio: 8,
+        categoria: "Pizzas",
+      },
+      {
+        nombre: "Pizza Carne Especial",
+        descripcion: "Tomate, mozzarella, carne, cebolla y huevo. Familiar: 17.00 €.",
+        precio: 8.5,
+        categoria: "Pizzas",
+      },
+      {
+        nombre: "Pizza De la Huerta",
+        descripcion: "Tomate natural, queso manchego, pimiento rojo, verde y cebolla. Familiar: 17.00 €.",
+        precio: 8.5,
+        categoria: "Pizzas",
+      },
+      {
+        nombre: "Pizza Di Parma",
+        descripcion: "Tomate, mozzarella, rúcula, parmesano y champiñón.",
+        precio: 8,
+        categoria: "Pizzas",
+      },
+      {
+        nombre: "Pizza Gaucha",
+        descripcion: "Salsa gaucha, mozzarella, carne y bacon.",
+        precio: 8.5,
+        categoria: "Pizzas",
+      },
+      {
+        nombre: "Pizza Góndola",
+        descripcion: "Tomate, mozzarella, serrano, atún, cebolla y pimiento. Familiar: 17.00 €.",
+        precio: 8.5,
+        categoria: "Pizzas",
+        especial: "Especialidad Góndola",
+      },
+      {
+        nombre: "Pizza Gulas",
+        descripcion: "Pizzaiola, mozzarella, gulas y gambas. Familiar: 16.00 €.",
+        precio: 8,
+        categoria: "Pizzas",
+      },
+      {
+        nombre: "Pizza Ílfaro",
+        descripcion: "Tomate, mozzarella, york, champiñón y alcachofa. Familiar: 16.00 €.",
+        precio: 8,
+        categoria: "Pizzas",
+      },
+      {
+        nombre: "Pizza Kebab Pollo/Ternera",
+        descripcion: "Tomate, mozzarella, salsa barbacoa, tomate natural y salsa de yogur. Familiar: 16.00 €.",
+        precio: 8,
+        categoria: "Pizzas",
+      },
+      {
+        nombre: "Pizza Mare",
+        descripcion: "Tomate, mozzarella, atún y cebolla. Familiar: 15.00 €.",
+        precio: 7.5,
+        categoria: "Pizzas",
+      },
+      {
+        nombre: "Pizza Margherita",
+        descripcion: "Tomate, mozzarella y orégano. Familiar: 15.00 €.",
+        precio: 7.5,
+        categoria: "Pizzas",
+      },
+      {
+        nombre: "Pizza Marinera",
+        descripcion: "Tomate, mozzarella, gambas, anchoas y champiñón. Familiar: 17.00 €.",
+        precio: 8.5,
+        categoria: "Pizzas",
+      },
+      {
+        nombre: "Pizza Mamma Mía",
+        descripcion: "Tomate, mozzarella, york, champiñón, cebolla y pimiento. Familiar: 16.00 €.",
+        precio: 8,
+        categoria: "Pizzas",
+      },
+      {
+        nombre: "Pizza Mediterránea",
+        descripcion: "Tomate, mozzarella, atún, pimientos y salmón. Familiar: 16.00 €.",
+        precio: 9,
+        categoria: "Pizzas",
+      },
+      {
+        nombre: "Pizza Pepperoni",
+        descripcion: "Tomate, mozzarella y pepperoni. Familiar: 16.00 €.",
+        precio: 8,
+        categoria: "Pizzas",
+      },
+      {
+        nombre: "Pizza York",
+        descripcion: "Tomate, mozzarella y york. Familiar: 15.00 €.",
+        precio: 7.5,
+        categoria: "Pizzas",
+      },
+      {
+        nombre: "Pizza York-Bacon",
+        descripcion: "Tomate, mozzarella, york y bacon. Familiar: 16.00 €.",
+        precio: 8,
+        categoria: "Pizzas",
+      },
+      {
+        nombre: "Pizza Quattro Stagioni",
+        descripcion: "Tomate, mozzarella, york, champiñón, chorizo, anchoas y pimiento. Familiar: 16.00 €.",
+        precio: 8,
+        categoria: "Pizzas",
+      },
+      {
+        nombre: "Pizza Chorizo Picante",
+        descripcion: "Tomate, mozzarella, chorizo, champiñón y cebolla. Familiar: 17.00 €.",
+        precio: 8.5,
+        categoria: "Pizzas",
+      },
+      {
+        nombre: "Pizza Salmón",
+        descripcion: "Tomate, mozzarella, salmón, queso manchego y gouda. Familiar: 18.00 €.",
+        precio: 8.5,
+        categoria: "Pizzas",
+      },
+      {
+        nombre: "Pizza Solana",
+        descripcion: "Tomate, mozzarella, atún, huevo duro y aceitunas. Familiar: 16.00 €.",
+        precio: 8,
+        categoria: "Pizzas",
+      },
+      {
+        nombre: "Pizza Tropical",
+        descripcion: "Tomate, mozzarella, york y piña. Familiar: 16.00 €.",
+        precio: 8,
+        categoria: "Pizzas",
+      },
+      {
+        nombre: "Pizza Vegetariana",
+        descripcion: "Tomate natural, mozzarella, pimiento verde, champiñón y jamón. Familiar: 16.00 €.",
+        precio: 8,
+        categoria: "Pizzas",
+      },
+
+      {
+        nombre: "Nueva Pizza Don Pablo",
+        descripcion: "Tomate, mozzarella, carne y salsa bacon. Familiar: 17.00 €.",
+        precio: 8.5,
+        categoria: "Nuevas Pizzas",
+      },
+      {
+        nombre: "Nueva Pizza Cremosa",
+        descripcion: "Salsa carbonara, crema de kebab y salsa. Familiar: 18.00 €.",
+        precio: 9,
+        categoria: "Nuevas Pizzas",
+      },
+      {
+        nombre: "Nueva Pizza Sweet Chilli",
+        descripcion: "Tomate, mozzarella, salsa de kebab, bacon, pollo crujiente y salsa mango habanero. Familiar: 18.00 €.",
+        precio: 9,
+        categoria: "Nuevas Pizzas",
+      },
+
+      {
+        nombre: "Hamburguesa Simple",
+        descripcion: "Tomate, lechuga y cebolla.",
+        precio: 3.5,
+        categoria: "Hamburguesas",
+      },
+      {
+        nombre: "Hamburguesa Completa",
+        descripcion: "Tomate, lechuga, cebolla y pepinillo.",
+        precio: 3.8,
+        categoria: "Hamburguesas",
+      },
+      {
+        nombre: "Hamburguesa con Queso",
+        descripcion: "Tomate, lechuga, cebolla y queso.",
+        precio: 4,
+        categoria: "Hamburguesas",
+      },
+      {
+        nombre: "Hamburguesa Especial",
+        descripcion: "Tomate, lechuga, cebolla, pepinillo, queso, bacon, york y huevo.",
+        precio: 5,
+        categoria: "Hamburguesas",
+        popular: true,
+      },
+      {
+        nombre: "Hamburguesa Ternera Especial",
+        descripcion: "Tomate, lechuga, cebolla caramelizada y queso de cabra.",
+        precio: 5,
+        categoria: "Hamburguesas",
+      },
+
+      {
+        nombre: "Sándwich Mixto",
+        descripcion: "York y queso.",
+        precio: 3.3,
+        categoria: "Sandwiches",
+      },
+      {
+        nombre: "Sándwich Mixto Bacon",
+        descripcion: "Bacon y queso.",
+        precio: 3.3,
+        categoria: "Sandwiches",
+      },
+      {
+        nombre: "Sándwich Triste",
+        descripcion: "York, queso y huevo.",
+        precio: 3.5,
+        categoria: "Sandwiches",
+      },
+      {
+        nombre: "Sándwich Americano",
+        descripcion: "Lechuga, tomate, york y huevo duro.",
+        precio: 4.5,
+        categoria: "Sandwiches",
+      },
+      {
+        nombre: "Sándwich Alemán",
+        descripcion: "Lechuga, pepinillo, cebolla y queso.",
+        precio: 4.5,
+        categoria: "Sandwiches",
+      },
+      {
+        nombre: "Sándwich Vegetal",
+        descripcion: "Lechuga, tomate, atún y espárragos.",
+        precio: 4,
+        categoria: "Sandwiches",
+      },
+      {
+        nombre: "Sándwich Serrano",
+        descripcion: "Serrano y queso.",
+        precio: 4.5,
+        categoria: "Sandwiches",
+      },
+      {
+        nombre: "Sándwich Salmón",
+        descripcion: "Lechuga, salmón y queso Philadelphia.",
+        precio: 4.5,
+        categoria: "Sandwiches",
+      },
+      {
+        nombre: "Sándwich César",
+        descripcion: "Lechuga, tomate, pollo y salsa César.",
+        precio: 4.5,
+        categoria: "Sandwiches",
+      },
+
+      {
+        nombre: "Patatas Fritas",
+        descripcion: "Ración de patatas fritas.",
+        precio: 2.5,
+        categoria: "Para picar",
+      },
+      {
+        nombre: "Patatas con Bacon y Queso",
+        descripcion: "Patatas con bacon y queso.",
+        precio: 4.5,
+        categoria: "Para picar",
+        popular: true,
+      },
+      {
+        nombre: "Aros de Cebolla",
+        descripcion: "Crujientes aros de cebolla.",
+        precio: 4.5,
+        categoria: "Para picar",
+      },
+      {
+        nombre: "Nuggets de Pollo",
+        descripcion: "Nuggets de pollo.",
+        precio: 4.5,
+        categoria: "Para picar",
+      },
+      {
+        nombre: "Salchipapas",
+        descripcion: "Patatas con salchicha.",
+        precio: 4.5,
+        categoria: "Para picar",
+      },
+      {
+        nombre: "Tequeños",
+        descripcion: "Tequeños.",
+        precio: 5.9,
+        categoria: "Para picar",
+      },
+
+      {
+        nombre: "Perrito Caliente",
+        descripcion: "Ketchup, bacon, pollo, ternera o mixto.",
+        precio: 3.1,
+        categoria: "Varios",
+      },
+      {
+        nombre: "Bola Carne Nº1",
+        descripcion: "Bola de carne.",
+        precio: 5.5,
+        categoria: "Varios",
+      },
+      {
+        nombre: "Bocapizza",
+        descripcion: "Bocapizza.",
+        precio: 2.5,
+        categoria: "Varios",
+      },
+      {
+        nombre: "Kebabpizza",
+        descripcion: "Kebabpizza.",
+        precio: 6.5,
+        categoria: "Varios",
+      },
+
+      {
+        nombre: "Quesadilla",
+        descripcion: "Ingredientes igual que las pizzas. Precio: 1€ menos que las pizzas.",
+        precio: 7,
+        categoria: "Quesadillas",
+      },
+
+      {
+        nombre: "Gofre Chocolate",
+        descripcion: "Postre dulce.",
+        precio: 3.5,
+        categoria: "Postres",
+      },
+      {
+        nombre: "Gofre Fresa",
+        descripcion: "Postre dulce.",
+        precio: 3.5,
+        categoria: "Postres",
+      },
+      {
+        nombre: "Gofre Kinder",
+        descripcion: "Postre dulce.",
+        precio: 3.5,
+        categoria: "Postres",
+      },
+      {
+        nombre: "Coulant de Chocolate",
+        descripcion: "Postre caliente de chocolate.",
+        precio: 3.8,
+        categoria: "Postres",
+      },
+      {
+        nombre: "Brownie de Chocolate",
+        descripcion: "Brownie de chocolate.",
+        precio: 3.5,
+        categoria: "Postres",
+      },
+      {
+        nombre: "Tarta de Queso",
+        descripcion: "Tarta de queso.",
+        precio: 4,
+        categoria: "Postres",
+      },
+      {
+        nombre: "Extra Cucurucho",
+        descripcion: "Extra cucurucho.",
+        precio: 0.5,
+        categoria: "Postres",
+      },
+
+      {
+        nombre: "Coca-Cola",
+        descripcion: "Fanta, Sprite, Nestea, Aquarius o Cerveza.",
+        precio: 2.5,
+        categoria: "Bebidas",
+      },
+      {
+        nombre: "Bebida a Domicilio",
+        descripcion: "Refresco para domicilio.",
+        precio: 2,
+        categoria: "Bebidas",
+      },
+    ],
+  },
+
   {
     id: "mocejon",
     nombre: "Góndola Mocejón",
@@ -8,62 +465,47 @@ export const pizzerias = [
     instagram: "https://www.instagram.com/gondola_mocejon/",
     estado: "Abierto hoy",
     destacado: "Especialidad en pizzas artesanas",
-
     horario: {
       estado: "Abierto ahora",
       hoy: "18:30 - 00:00",
     },
-
     productos: [
       {
         nombre: "Pizza Barbacoa",
-        descripcion:
-          "Mozzarella, bacon, pollo, carne y salsa BBQ.",
+        descripcion: "Mozzarella, bacon, pollo, carne y salsa BBQ.",
         precio: 10.5,
         categoria: "Pizzas",
         popular: true,
       },
-
       {
         nombre: "Pizza Carbonara",
-        descripcion:
-          "Base carbonara, bacon, champiñón y mozzarella.",
+        descripcion: "Base carbonara, bacon, champiñón y mozzarella.",
         precio: 10,
         categoria: "Pizzas",
         popular: true,
       },
-
       {
         nombre: "Pizza 4 Quesos",
-        descripcion:
-          "Mezcla cremosa de quesos fundidos.",
+        descripcion: "Mezcla cremosa de quesos fundidos.",
         precio: 11,
         categoria: "Pizzas",
-        popular: false,
       },
-
       {
         nombre: "Hamburguesa Góndola",
-        descripcion:
-          "Pan brioche, carne jugosa, queso y salsa especial.",
+        descripcion: "Pan brioche, carne jugosa, queso y salsa especial.",
         precio: 8.9,
         categoria: "Hamburguesas",
         popular: true,
       },
-
       {
         nombre: "Panini Mixto",
-        descripcion:
-          "Crujiente, caliente, con jamón y queso fundido.",
+        descripcion: "Crujiente, caliente, con jamón y queso fundido.",
         precio: 5.5,
         categoria: "Entrantes",
-        popular: false,
       },
-
       {
         nombre: "Patatas Bacon Cheese",
-        descripcion:
-          "Patatas doradas con bacon, queso y salsa.",
+        descripcion: "Patatas doradas con bacon, queso y salsa.",
         precio: 6.9,
         categoria: "Entrantes",
         popular: true,
@@ -71,49 +513,5 @@ export const pizzerias = [
     ],
   },
 
-  {
-    id: "toledo",
-    nombre: "Góndola Toledo",
-    direccion: "Toledo",
-    telefono: "825936161",
-    whatsapp: "34825936161",
-    instagram: "https://www.instagram.com/gondola_mocejon/",
-    estado: "Pide para recoger",
-    destacado: "Pizzas recién horneadas",
 
-    horario: {
-      estado: "Abierto ahora",
-      hoy: "19:00 - 00:30",
-    },
-
-    productos: [
-      {
-        nombre: "Pizza Prosciutto",
-        descripcion:
-          "Tomate, mozzarella, jamón cocido y orégano.",
-        precio: 9.9,
-        categoria: "Pizzas",
-        popular: true,
-        especial: "Pizza del mes",
-      },
-
-      {
-        nombre: "Pizza Diavola",
-        descripcion:
-          "Pepperoni, mozzarella, tomate y toque picante.",
-        precio: 11.2,
-        categoria: "Pizzas",
-        popular: true,
-      },
-
-      {
-        nombre: "Burger BBQ",
-        descripcion:
-          "Carne, queso, bacon crujiente y salsa barbacoa.",
-        precio: 8.5,
-        categoria: "Hamburguesas",
-        popular: false,
-      },
-    ],
-  },
 ];
