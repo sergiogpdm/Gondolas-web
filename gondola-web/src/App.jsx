@@ -6,6 +6,8 @@ import Menu from "./components/Menu";
 import Footer from "./components/Footer";
 import "./index.css";
 
+import { FaPhoneAlt, FaInstagram } from "react-icons/fa";
+
 export default function App() {
   const [pizzeriaActual, setPizzeriaActual] = useState(pizzerias[0]);
   const [categoriaActiva, setCategoriaActiva] = useState("Todos");
@@ -74,14 +76,14 @@ export default function App() {
           href={pizzeriaActual.instagram}
           target="_blank"
         >
-          Instagram
+          <FaInstagram />
         </a>
 
         <a
           className="floatingOrder"
           href={`tel:${pizzeriaActual.telefono}`}
         >
-          Llamar ahora
+          <FaPhoneAlt />
         </a>
       </div>
     </>

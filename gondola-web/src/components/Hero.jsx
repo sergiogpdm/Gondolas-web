@@ -13,7 +13,7 @@ export default function Hero({ pizzerias, pizzeriaActual, onSelect }) {
       </div>
 
       <div className="heroText">
-        <span className="eyebrow">Góndola Pizzería & Grill</span>
+
 
         <h1>
           Pizzería Góndola

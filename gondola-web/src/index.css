@@ -172,7 +172,6 @@ nav a {
 
 /* HERO TEXT */
 
-.eyebrow,
 .sectionHeader span,
 .orderBox span {
   display: inline-flex;
@@ -913,27 +912,24 @@ nav a {
   display: flex;
   flex-direction: column;
 
-  gap: 12px;
+  gap: 14px;
 }
 
 .floatingOrder,
 .floatingInstagram {
+  width: 68px;
+  height: 68px;
+
   display: flex;
 
   align-items: center;
   justify-content: center;
 
-  min-height: 58px;
-
-  padding: 16px 24px;
-
-  border-radius: 999px;
+  border-radius: 50%;
 
   color: white;
 
-  font-weight: 1000;
-
-  text-align: center;
+  font-size: 28px;
 
   backdrop-filter: blur(10px);
 
@@ -947,7 +943,7 @@ nav a {
 .floatingInstagram:hover {
   transform:
     translateY(-4px)
-    scale(1.03);
+    scale(1.08);
 }
 
 /* CALL BUTTON */
@@ -983,14 +979,16 @@ nav a {
 
 @media (max-width: 950px) {
   .floatingButtons {
-    left: 20px;
-    right: 20px;
-    bottom: 20px;
+    right: 18px;
+    bottom: 18px;
   }
 
   .floatingOrder,
   .floatingInstagram {
-    width: 100%;
+    width: 62px;
+    height: 62px;
+
+    font-size: 24px;
   }
 }
 
