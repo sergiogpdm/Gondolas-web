@@ -10,8 +10,8 @@ export default function Menu({
     categoriaActiva === "Todos"
       ? pizzeria.productos
       : pizzeria.productos.filter(
-          (producto) => producto.categoria === categoriaActiva
-        );
+        (producto) => producto.categoria === categoriaActiva
+      );
 
   return (
     <section className="menu" id="carta">
@@ -55,26 +55,29 @@ export default function Menu({
           </div>
         </div>
 
-        <div className="orderBox" id="pedido">
-          <span>Pedido directo</span>
-
-          <h2>¿Ya tienes hambre?</h2>
-
-          <p>Pide directamente en {pizzeria.nombre}.</p>
-
-          <div className="orderActions">
-            <a
-              className="btn btnRed"
-              href={`https://wa.me/${pizzeria.whatsapp}`}
-              target="_blank"
-            >
-              Pedir por WhatsApp
-            </a>
-
-            <a className="btn btnWhite" href={`tel:${pizzeria.telefono}`}>
-              Llamar
-            </a>
+        <div className="callBox" id="pedido">
+          <div className="callIcon">
+            🛵
           </div>
+
+          <div className="callContent">
+            <span>Pedido por teléfono</span>
+
+            <h2>Llama a {pizzeria.nombre}</h2>
+
+            <p>
+              Haz tu pedido directamente en el local seleccionado.
+            </p>
+
+            <strong>{pizzeria.telefono}</strong>
+          </div>
+
+          <a
+            className="callButton"
+            href={`tel:${pizzeria.telefono}`}
+          >
+            Llamar ahora
+          </a>
         </div>
       </div>
     </section>
