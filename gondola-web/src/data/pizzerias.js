@@ -456,62 +456,7 @@ export const pizzerias = [
     ],
   },
 
-  {
-    id: "mocejon",
-    nombre: "Góndola Mocejón",
-    direccion: "Plaza Don Tomás Díaz Prieto",
-    telefono: "633152056",
-    whatsapp: "34633152056",
-    instagram: "https://www.instagram.com/gondola_mocejon/",
-    estado: "Abierto hoy",
-    destacado: "Especialidad en pizzas artesanas",
-    horario: {
-      estado: "Abierto ahora",
-      hoy: "18:30 - 00:00",
-    },
-    productos: [
-      {
-        nombre: "Pizza Barbacoa",
-        descripcion: "Mozzarella, bacon, pollo, carne y salsa BBQ.",
-        precio: 10.5,
-        categoria: "Pizzas",
-        popular: true,
-      },
-      {
-        nombre: "Pizza Carbonara",
-        descripcion: "Base carbonara, bacon, champiñón y mozzarella.",
-        precio: 10,
-        categoria: "Pizzas",
-        popular: true,
-      },
-      {
-        nombre: "Pizza 4 Quesos",
-        descripcion: "Mezcla cremosa de quesos fundidos.",
-        precio: 11,
-        categoria: "Pizzas",
-      },
-      {
-        nombre: "Hamburguesa Góndola",
-        descripcion: "Pan brioche, carne jugosa, queso y salsa especial.",
-        precio: 8.9,
-        categoria: "Hamburguesas",
-        popular: true,
-      },
-      {
-        nombre: "Panini Mixto",
-        descripcion: "Crujiente, caliente, con jamón y queso fundido.",
-        precio: 5.5,
-        categoria: "Entrantes",
-      },
-      {
-        nombre: "Patatas Bacon Cheese",
-        descripcion: "Patatas doradas con bacon, queso y salsa.",
-        precio: 6.9,
-        categoria: "Entrantes",
-        popular: true,
-      },
-    ],
-  },
+  
 
 
 ];
